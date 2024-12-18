@@ -1,0 +1,42 @@
+@font-face {
+    font-family: Arial_Rounded;
+    src: url(../Arial\ Rounded\ Bold.ttf);
+}
+body {
+
+    background-image: url(../hintergrund.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial_Rounded;
+    background-color: black;
+    
+}
+
+h1 {
+   
+    color: white;
+    text-align: left;
+    padding-bottom: 100px;
+    position: fixed;
+ 
+}
+
+.container {
+padding-top: 300px;
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: auto;
+justify-content: center;
+padding-bottom: 300px;
+color: white;
+
+}
+.image {
+  width: 300px;
+ 
+}
+
+
+
+
