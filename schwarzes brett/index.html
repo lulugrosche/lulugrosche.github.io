@@ -4,7 +4,11 @@
 <title>Text Eingabe Demo</title>
 <link rel="stylesheet" href="style.css">
 <style>
-
+.divider {
+    border-bottom: 1px solid #ccc;
+    margin: 5px 0;
+    width: 100%;
+}
 </style>
 </head>
 <body>
@@ -16,6 +20,9 @@
 const inputBox = document.getElementById('inputBox');
 const postContainer = document.getElementById('postContainer');
 
+// Laden der gespeicherten Posts beim Start
+document.addEventListener('DOMContentLoaded', loadPosts);
+
 function getDateTimeString() {
     const now = new Date();
     const day = now.toLocaleDateString('de-DE', { weekday: 'long' });
@@ -24,34 +31,56 @@ function getDateTimeString() {
     return `${day}, ${date} um ${time}`;
 }
 
+function savePosts() {
+    const posts = [];
+    document.querySelectorAll('.post').forEach(post => {
+        posts.push({
+            timestamp: post.querySelector('.timestamp').textContent,
+            content: post.querySelector('.content').textContent
+        });
+    });
+    localStorage.setItem('posts', JSON.stringify(posts));
+}
+
+function loadPosts() {
+    const savedPosts = JSON.parse(localStorage.getItem('posts') || '[]');
+    savedPosts.forEach(postData => {
+        createPost(postData.content, postData.timestamp);
+    });
+}
+
+function createPost(content, timestamp = getDateTimeString()) {
+    const post = document.createElement('div');
+    post.className = 'post';
+    
+    const img = document.createElement('img');
+    img.src = 'hintergrund.png';
+    img.className = 'post-image';
+    img.alt = 'Post Icon';
+    
+    const timestampDiv = document.createElement('div');
+    timestampDiv.className = 'timestamp';
+    timestampDiv.textContent = timestamp;
+    
+    const divider = document.createElement('div');
+    divider.className = 'divider';
+    
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'content';
+    contentDiv.textContent = content;
+    
+    post.appendChild(img);
+    post.appendChild(timestampDiv);
+    post.appendChild(divider);
+    post.appendChild(contentDiv);
+    
+    postContainer.insertBefore(post, postContainer.firstChild);
+}
+
 inputBox.addEventListener('keypress', function(e) {
     if (e.key === 'Enter' && this.value.trim() !== '') {
-        const post = document.createElement('div');
-        post.className = 'post';
-        
-        const img = document.createElement('img');
-        img.src = 'hintergrund.png';
-        img.className = 'post-image';
-        img.alt = 'Post Icon';
-        
-        const timestamp = document.createElement('div');
-        timestamp.className = 'timestamp';
-        timestamp.textContent = getDateTimeString();
-        
-        const divider = document.createElement('div');
-        divider.className = 'divider';
-        
-        const content = document.createElement('div');
-        content.className = 'content';
-        content.textContent = this.value;
-        
-        post.appendChild(img);
-        post.appendChild(timestamp);
-        post.appendChild(divider);
-        post.appendChild(content);
-        
-        postContainer.insertBefore(post, postContainer.firstChild);
-        
+        createPost(this.value);
+        savePosts();
         this.value = '';
     }
 });
