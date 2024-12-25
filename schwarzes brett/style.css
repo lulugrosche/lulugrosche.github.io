@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Bon-Mono';
+    src: url(VCR_OSD_MONO_1.001.ttf);
+}
+.post {
+    box-shadow: inset 2em 1em 5em lightgrey,  2em 1em 5em lightgrey;
+    padding: 10px;
+    margin: 10px ;
+    width: 250px;
+    font-family: 'Bon-Mono';
+
+}
+#postContainer {
+    margin-top: 20px;
+    margin-left: 300px;
+}
+
+#inputBox {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    opacity: 0%;
+  
+}
+
+.timestamp {
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.post-image {
+    width: 50px;  /* oder die gewünschte Größe */
+    height: 50px;
+    display: block;
+    margin: 0 auto 5px auto; /* Zentriert das Bild */
+}
+
+.divider {
+    border-bottom: 1px dashed black;
+    margin: 5px 0;
+    width: 100%;
+}
+
+

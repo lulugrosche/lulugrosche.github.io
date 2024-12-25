@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Text Eingabe Demo</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+</style>
+</head>
+<body>
+<div>
+<input type="text" id="inputBox" placeholder="Gib deinen Text ein und drücke Enter...">
+<div id="postContainer">
+</div>
+<script>
+const inputBox = document.getElementById('inputBox');
+const postContainer = document.getElementById('postContainer');
+
+function getDateTimeString() {
+    const now = new Date();
+    const day = now.toLocaleDateString('de-DE', { weekday: 'long' });
+    const date = now.toLocaleDateString('de-DE');
+    const time = now.toLocaleTimeString('de-DE');
+    return `${day}, ${date} um ${time}`;
+}
+
+inputBox.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter' && this.value.trim() !== '') {
+        const post = document.createElement('div');
+        post.className = 'post';
+        
+        const img = document.createElement('img');
+        img.src = 'hintergrund.png';
+        img.className = 'post-image';
+        img.alt = 'Post Icon';
+        
+        const timestamp = document.createElement('div');
+        timestamp.className = 'timestamp';
+        timestamp.textContent = getDateTimeString();
+        
+        const divider = document.createElement('div');
+        divider.className = 'divider';
+        
+        const content = document.createElement('div');
+        content.className = 'content';
+        content.textContent = this.value;
+        
+        post.appendChild(img);
+        post.appendChild(timestamp);
+        post.appendChild(divider);
+        post.appendChild(content);
+        
+        postContainer.insertBefore(post, postContainer.firstChild);
+        
+        this.value = '';
+    }
+});
+</script>
+</body>
+</html>
