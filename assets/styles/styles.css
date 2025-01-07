@@ -55,6 +55,7 @@
     left: 300px; /* Abstand von links */
     width: 500px;
     height: auto;
+    pointer-events: none;
   }
   
   /* Zweites SVG positionieren und skalieren */
