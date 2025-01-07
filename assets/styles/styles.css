@@ -1,48 +1,109 @@
 @font-face {
     font-family: Arial_Rounded;
-    src: url(../Arial\ Rounded\ Bold.ttf);
-}
-body {
-
-    background-image: url(../hintergrund.png);
+    src: url(../../schwarzesbrettneu/post/enter-the-gungeon-big.ttf);
+  }
+  
+  body {
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Arial_Rounded;
-    background-color: black;
-    
-}
-
-h1 {
-   
+    background-color: gainsboro;
+    position: relative;
+    font-size: 30px;
+  }
+  
+  h1 {
     color: white;
     text-align: left;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     position: fixed;
- 
-}
+    display: none;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+   
+    padding-bottom: 300px;
+    color: rgb(37, 36, 47);
+    position: relative;
+    z-index: 1;
+    margin-top: 200px;
+  }
+  
+  .image {
+    width: 300px;
+  }
+  
+  a {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+  }
+  
+  /* Styling für alle SVGs */
+  svg {
+    position: fixed;
+    z-index: 2; /* Höher als der Container */
+    opacity: 40%;
+  }
+  
+  /* Erstes SVG positionieren und skalieren */
+  .svg1 {
+    top: 0; /* Abstand von oben */
+    left: 300px; /* Abstand von links */
+    width: 500px;
+    height: auto;
+  }
+  
+  /* Zweites SVG positionieren und skalieren */
+  .svg2 {
+    top: 200px; /* Verschiebe es weiter nach unten */
+    left: 50px; /* Abstand von links */
+    width: 500px; /* Reduzierte Breite */
+    height: auto;
+  }
+  
+  .svg3 {
+    top: 50px; /* Verschiebe es weiter nach unten */
+    left: 800px; /* Abstand von links */
+    width: 500px; /* Reduzierte Breite */
+    height: auto;
+  }
+  
+  path {
+    fill: none;
+    stroke-width: 1;
+    stroke-linecap: round;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+  }
+  
+  .animated-path {
+    animation: draw 30s linear forwards;
+    stroke: #1a7000; /* Grün */
+    animation-iteration-count: 1;
+  }
+  
+  .animated-path2 {
+    animation: draw 25s linear forwards;
+    stroke: #4414f0; /* Lila */
+    animation-iteration-count: 1;
+  }
 
-.container {
-padding-top: 300px;
-display: grid;
-grid-template-columns: auto;
-grid-template-rows: auto;
-justify-content: center;
-padding-bottom: 300px;
-color: white;
-
-}
-.image {
-  width: 300px;
- 
-}
-
-a {
-
-    color: yellow;
-    font-size: 2em;
-
-}
-
-
-
+  .animated-path3 {
+    animation: draw 20s linear forwards;
+    stroke: #ff4400; /* Lila */
+   
+  }
+  
+  @keyframes draw {
+    from {
+      stroke-dasharray: 0, 500;
+    }
+    to {
+      stroke-dasharray: 500, 0;
+    }
+  }
+  
