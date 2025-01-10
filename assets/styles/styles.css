@@ -8,29 +8,29 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: Arial_Rounded;
-    background-color: gainsboro;
+    background-color: rgb(255, 255, 255);
     position: relative;
-    font-size: 30px;
+    font-size: 25px;
   }
   
   h1 {
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: left;
-    padding-bottom: 200px;
+    padding-bottom: 300px;
     position: fixed;
-    display: none;
+    
   }
   
   .container {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-   
     padding-bottom: 300px;
     color: rgb(37, 36, 47);
     position: relative;
     z-index: 1;
-    margin-top: 200px;
+    margin-top: 50px;
+    margin-right: 400px;
   }
   
   .image {
@@ -68,12 +68,37 @@
   }
   
   .svg3 {
-    top: 50px; /* Verschiebe es weiter nach unten */
-    left: 800px; /* Abstand von links */
+    top: 80px; /* Verschiebe es weiter nach unten */
+    left: 900px; /* Abstand von links */
     width: 500px; /* Reduzierte Breite */
     height: auto;
+    opacity: 100%;
   }
-  
+  .svg4 {
+    top: -10px; /* Verschiebe es weiter nach unten */
+    left: 800px; /* Abstand von links */
+    width: 200px; /* Reduzierte Breite */
+    height: auto;
+    opacity: 100%;
+    display: none;
+  }
+
+  .svg5 {
+    top: -200px; /* Verschiebe es weiter nach unten */
+    left: 60px; /* Abstand von links */
+    width: 2000px; /* Reduzierte Breite */
+    height: auto;
+    opacity: 100%;
+  }
+
+  .svg6 {
+    top: 0px; /* Verschiebe es weiter nach unten */
+    left: 60px; /* Abstand von links */
+    width: 800px; /* Reduzierte Breite */
+    height: auto;
+    opacity: 100%;
+  }
+
   path {
     fill: none;
     stroke-width: 1;
@@ -83,20 +108,38 @@
   }
   
   .animated-path {
-    animation: draw 30s linear forwards;
+    animation: draw 230s linear forwards;
     stroke: #1a7000; /* Grün */
     animation-iteration-count: 1;
   }
   
   .animated-path2 {
-    animation: draw 25s linear forwards;
+    animation: draw 250s linear forwards;
     stroke: #4414f0; /* Lila */
     animation-iteration-count: 1;
   }
 
   .animated-path3 {
-    animation: draw 20s linear forwards;
+    animation: draw 260s linear forwards;
     stroke: #ff4400; /* Lila */
+   
+  }
+
+  .animated-path4 {
+    animation: draw 300s linear forwards;
+    stroke: #000000; /* Lila */
+   
+  }
+
+  .animated-path5 {
+    animation: draw 300s linear forwards;
+    stroke: #000000; /* Lila */
+   
+  }
+
+  .animated-path6 {
+    animation: draw 400s linear forwards;
+    stroke: #000dff; /* Lila */
    
   }
   
