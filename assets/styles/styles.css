@@ -1,6 +1,6 @@
 @font-face {
     font-family: Arial_Rounded;
-    src: url(../enter-the-gungeon-big\ Kopie.ttf);
+    src: url(../../schwarzesbrettneu/post/merchant-copy-font/MerchantCopy-GOXq.ttf);
   }
   
   body {
@@ -11,6 +11,7 @@
     background-color: rgb(255, 255, 255);
     position: relative;
     font-size: 25px;
+    overflow-x: hidden;
   }
   
   h1 {
