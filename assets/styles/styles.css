@@ -10,7 +10,7 @@
     font-family: Arial_Rounded;
     background-color: rgb(255, 255, 255);
     position: relative;
-    font-size: 25px;
+    font-size: 30px;
     overflow-x: hidden;
   }
   
@@ -19,6 +19,7 @@
     text-align: left;
     padding-bottom: 300px;
     position: fixed;
+    margin-left: 20px;
     
   }
   
@@ -32,6 +33,7 @@
     z-index: 1;
     margin-top: 50px;
     margin-right: 400px;
+    margin-left: 20px;
   }
   
   .image {
@@ -40,7 +42,7 @@
   
   a {
     color: rgb(0, 0, 0);
-    font-size: 25px;
+    font-size: 30px;
   }
   
   /* Styling für alle SVGs */
