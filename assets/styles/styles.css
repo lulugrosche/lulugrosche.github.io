@@ -9,36 +9,52 @@
     background-attachment: fixed;
     font-family: Arial_Rounded;
     background-color: rgb(255, 255, 255);
-    position: relative;
+    position: absolute;
     font-size: 40px;
     overflow-x: hidden;
   }
+  
   
   h1 {
     color: rgb(0, 0, 0);
     text-align: left;
     padding-bottom: 300px;
     font-size: 80px;
+    top: 0px;
     position: fixed;
     margin-left: 20px;
     
   }
   
   .container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    padding-bottom: 300px;
-    color: rgb(37, 36, 47);
-    position: relative;
-    z-index: 1;
-    margin-top: 50px;
-    margin-right: 400px;
-    margin-left: 20px;
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    flex-direction: column; /* Für vertikales Layout */
+    width: 100vw; /* Volle Breite des Viewports */
+    height: 100vh; /* Volle Höhe des Viewports */
+    position: absolute; /* Container bleibt im Viewport */
+    top: 0;
+    left: 0;
+    margin-top: 4300px;
+ 
+  }
+  .container1 {
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    flex-direction: column; /* Für vertikales Layout */
+    width: 100vw; /* Volle Breite des Viewports */
+    height: 100vh; /* Volle Höhe des Viewports */
+    position: absolute; /* Container bleibt im Viewport */
+    top: 0;
+    left: 0;
+ 
   }
   
   .image {
-    width: 300px;
+    width: 500px;
+    
   }
   
   a {
@@ -46,61 +62,60 @@
    
   }
   
-  /* Styling für alle SVGs */
   svg {
     position: fixed;
-    z-index: 2; /* Höher als der Container */
+    z-index: 2; 
     opacity: 40%;
     pointer-events: none;
   }
   
-  /* Erstes SVG positionieren und skalieren */
+
   .svg1 {
-    top: 0; /* Abstand von oben */
-    left: 300px; /* Abstand von links */
+    top: 0; 
+    left: 500px; 
     width: 500px;
     height: auto;
     
   }
   
-  /* Zweites SVG positionieren und skalieren */
+
   .svg2 {
-    top: 200px; /* Verschiebe es weiter nach unten */
-    left: 50px; /* Abstand von links */
-    width: 500px; /* Reduzierte Breite */
+    top: 200px; 
+    left: 50px; 
+    width: 500px; 
     height: auto;
   }
   
   .svg3 {
-    top: 80px; /* Verschiebe es weiter nach unten */
-    left: 900px; /* Abstand von links */
-    width: 500px; /* Reduzierte Breite */
+    top: 80px; 
+    left: 900px; 
+    width: 500px; 
     height: auto;
-    opacity: 100%;
+    opacity: 40%;
   }
   .svg4 {
-    top: -10px; /* Verschiebe es weiter nach unten */
-    left: 800px; /* Abstand von links */
-    width: 200px; /* Reduzierte Breite */
+    top: -10px; 
+    left: 800px; 
+    width: 200px; 
     height: auto;
     opacity: 100%;
     display: none;
   }
 
   .svg5 {
-    top: -200px; /* Verschiebe es weiter nach unten */
-    left: 60px; /* Abstand von links */
-    width: 2000px; /* Reduzierte Breite */
+    top: -200px; 
+    left: 60px; 
+    width: 2000px; 
     height: auto;
-    opacity: 100%;
+    opacity: 40%;
   }
 
   .svg6 {
-    top: 0px; /* Verschiebe es weiter nach unten */
-    left: 60px; /* Abstand von links */
-    width: 800px; /* Reduzierte Breite */
+    top: 0px; 
+    left: 60px; 
+    width: 800px; 
     height: auto;
-    opacity: 100%;
+    opacity: 40%;
   }
 
   path {
@@ -113,37 +128,37 @@
   
   .animated-path {
     animation: draw 230s linear forwards;
-    stroke: #1a7000; /* Grün */
+    stroke: #e96f6f; /* Grün */
     animation-iteration-count: 1;
   }
   
   .animated-path2 {
     animation: draw 250s linear forwards;
-    stroke: #4414f0; /* Lila */
+    stroke: #e96f6f; /* Lila */
     animation-iteration-count: 1;
   }
 
   .animated-path3 {
     animation: draw 260s linear forwards;
-    stroke: #ff4400; /* Lila */
+    stroke: #db805f; /* Lila */
    
   }
 
   .animated-path4 {
     animation: draw 300s linear forwards;
-    stroke: #000000; /* Lila */
+    stroke: #bc6161; /* Lila */
    
   }
 
   .animated-path5 {
     animation: draw 300s linear forwards;
-    stroke: #000000; /* Lila */
+    stroke: #b0d574; /* Lila */
    
   }
 
   .animated-path6 {
     animation: draw 400s linear forwards;
-    stroke: #000dff; /* Lila */
+    stroke: #d5ed7b; /* Lila */
    
   }
   
@@ -155,4 +170,29 @@
       stroke-dasharray: 500, 0;
     }
   }
+
+ .text {
+  
+  width: 500px;
+  border: 0.5px solid black;
+  padding: 20px;
+  font-size: 40px;
+  word-spacing: -0.05em;
+  letter-spacing: -0.02em;
+  
+ 
+  }
+
+  .text1 {
+  
+    width: 500px;
+    border: 0.5px solid black;
+    padding: 20px;
+    font-size: 40px;
+    word-spacing: -0.05em;
+    letter-spacing: -0.02em;
+    
+   
+    }
+    
   
